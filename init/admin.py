@@ -10,11 +10,11 @@ from .forms import usercreation
 # tasks/admin.py
 
 # 修改管理后台标题
-admin.site.site_header = 'kj的库存管理系统'
+admin.site.site_header = 'wcs的库存管理系统'
 # 修改页面标题
-admin.site.site_title = 'kj的库存管理系统'
+admin.site.site_title = 'wcs的库存管理系统'
 # 修改首页标题
-admin.site.index_title = 'kj的库存管理系统'
+admin.site.index_title = 'wcs的库存管理系统'
 
 
 
