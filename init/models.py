@@ -52,15 +52,16 @@ class Material(models.Model):
     # 物料描述信息，字符串类型，最大长度100，在管理界面显示为"描述信息"
     Description = models.CharField(max_length=100,verbose_name='描述信息')
     # 物料图片，图片类型，默认为'/static/logo1.png'，在管理界面显示为"图片"
-    Picture = models.ImageField(upload_to='C:\\Users\\Kj\\Desktop\\inventory\\media\\images', default='/static/logo1.png',verbose_name='图片',null=True)
+    Picture = models.ImageField(upload_to='images/', default='/static/logo1.png', verbose_name='图片', null=True)
     # 物料价格，浮点数类型，不能为空，在管理界面显示为"价格"
     Price = models.FloatField(null=False,verbose_name='价格')
     # 入库时间，日期时间类型，默认为当前时间，在管理界面显示为"入库时间"
     Now_datetime = models.DateTimeField(verbose_name='入库时间',default=datetime.datetime.now)
     # 供货单位，字符串类型，最大长度20，不能为空，在管理界面显示为"供货单位"
-    Supplier = models.CharField(max_length=20,null=False,verbose_name='供货单位') 
+    Supplier = models.CharField(max_length=20,null=False,verbose_name='供货单位')
 
-    
+
+
     def clean(self):
         """
         数据验证方法，确保最大库存不小于最小库存

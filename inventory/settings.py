@@ -138,7 +138,7 @@ STATIC_URL = '/static/'  # 静态文件URL前缀
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # 静态文件目录
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static')  # 静态文件收集目录
 MEDIA_URL = '/media/'  # 媒体文件URL前缀
-MEDIA_ROOT = 'C:/Users/王陲松/Desktop/inventory/media/images'  # 媒体文件存储目录
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # simpleui的配置
 # SimpleUI管理界面配置

@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='material',
             name='Picture',
-            field=models.ImageField(default='/static/logo1.png', null=True, upload_to='C:\\Users\\Kj\\Desktop\\inventory\\media\\images', verbose_name='图片'),
+            field=models.ImageField(default='/static/logo1.png', null=True, upload_to='images', verbose_name='图片'),
         ),
         migrations.AlterField(
             model_name='out_storage',
